@@ -12,15 +12,18 @@
 
 ####  容器类知识点
 
-`Arrays.asList()`转换得到的不是真正的数组仅可用于读，对数据进行改动会抛异常（因为为实现相关方法）
+* `Arrays.asList()`转换得到的不是真正的数组仅可用于读，对数据进行改动会抛异常（因为为实现相关方法）
 如果需要将其转化成ArrayList可以使用：
 
-1. `new ArrayList<>(Arrays.asList(chars));`
-2. `new ArrayList(List.of(chars));   `  JDK9以上支持的 List类 中的方法
+    1. `new ArrayList<>(Arrays.asList(chars));`
+    2. `new ArrayList(List.of(chars));   `  JDK9以上支持的 List类 中的方法
+
+* 应当在迭代器中操作容器数据，而不是在foreach中
 
 ## 每日连击  :water_buffalo:
 
 * 【03-03】1-5题 :heavy_plus_sign:
+* 【03-15】6题 :heavy_plus_sign:
 
 
 
