@@ -4,7 +4,7 @@ package org.xjosiah.array;
  * @author  xjosiah
  * @since   2021/3/3
  */
-public class ReverseLinkedList {
+public class _005_ReverseLinkedList {
     private static MyLinkedNode linkedNode8;
 
     static {

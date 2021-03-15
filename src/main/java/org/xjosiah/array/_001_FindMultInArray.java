@@ -8,7 +8,7 @@ import java.util.TreeSet;
  * @author xjosiah
  * @since 2021/3/3
  */
-public class FindMultInArray {
+public class _001_FindMultInArray {
     private static int[] array = {2, 3, 1, 0, 2, 5, 3, 1, 3, 6, 8, 8, 9, 10, 11, 12, 11, 10, 0, 19, 6, 20};
 
     /**

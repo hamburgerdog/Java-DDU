@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author xjosiah
  * @since 2021/3/3
  */
-public class EditCharArray {
+public class _004_EditCharArray {
     private static char[] chars = "We Are Happy".toCharArray();
 
     /**
@@ -26,7 +26,7 @@ public class EditCharArray {
 
         length += count * 2;
         //  拓宽数组
-        chars = Arrays.copyOf(EditCharArray.chars, length);
+        chars = Arrays.copyOf(_004_EditCharArray.chars, length);
 
         int p2Index = length - 1;
         int p1Index = p2Index - count * 2;
