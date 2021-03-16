@@ -5,8 +5,9 @@
 > * 存放每日练习的算法题目和解题思路
 > * 存放练习过程中遇到的知识点
 > * 存放练习Java和使用idea过程中使用到的技巧
+> PS: *该仓库为测试全不覆盖仓库~即不考虑异常情况*
 >
-> 当前练习的**《剑指offer》**题目仓库：[gatieme/CodingInterviews](https://github.com/gatieme/CodingInterviews)
+> 当前练习的 **《剑指offer》** 题目仓库：[gatieme/CodingInterviews](https://github.com/gatieme/CodingInterviews)
 
 ## 小知识点补充  :page_facing_up:
 
@@ -20,10 +21,13 @@
 
 * 应当在迭代器中操作容器数据，而不是在foreach中
 
+* 通常使用我们会使用 [Deque类](https://www.matools.com/file/manual/jdk_api_1.8_google/java/util/Deque.html) 来实现堆栈队列操作，即使用一个双端队列
+
 ## 每日连击  :water_buffalo:
 
-* 【03-03】1-5题 :heavy_plus_sign:
-* 【03-15】6题 :heavy_plus_sign:
+* 【03-03】001-005题 :heavy_plus_sign:
+* 【03-15】006题 :heavy_plus_sign:
+* 【03-16】007题 :heavy_plus_sign:
 
 
 
