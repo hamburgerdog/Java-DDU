@@ -12,7 +12,8 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.5.7</version>
+            <!-- 5.6.0还是用不了 -->
+            <version>5.5.9</version>
         </dependency>
     </dependencies>
     <build>
