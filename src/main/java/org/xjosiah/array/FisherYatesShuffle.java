@@ -26,10 +26,10 @@ public class FisherYatesShuffle {
         HashMap<String, Integer> analyzedResultMap = new HashMap<>();
         int analyzeTime = 100000;
         int i = 0;
-        while (i < analyzeTime){
-            int [] anlyzeItem = Arrays.copyOf(simpleArray2Analyze,simpleArray2Analyze.length);
+        while (i < analyzeTime) {
+            int[] anlyzeItem = Arrays.copyOf(simpleArray2Analyze, simpleArray2Analyze.length);
             shuffle(anlyzeItem);
-            putInMap(Arrays.toString(anlyzeItem),analyzedResultMap);
+            putInMap(Arrays.toString(anlyzeItem), analyzedResultMap);
             i++;
         }
         System.out.println(analyzedResultMap);
@@ -57,16 +57,13 @@ public class FisherYatesShuffle {
     /**
      * 注意要把key设置为String类型
      * 原先bug记录：用int[]类型做key，结果由于万物皆对象导致key统统唯一
+     *
      * @param key
      * @param map
      */
-    private static void putInMap(String key,HashMap<String,Integer> map){
+    private static void putInMap(String key, HashMap<String, Integer> map) {
         Integer value = map.get(key);
-        if (value==null){
-            map.put(key,1);
-            return;
-        }
-        map.put(key,value+1);
+        map.put(key, value != null ? value + 1 : 1);
     }
 }
 
