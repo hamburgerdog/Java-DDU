@@ -18,18 +18,19 @@
 
     1. `new ArrayList<>(Arrays.asList(chars));`
     2. `new ArrayList(List.of(chars));   `  JDK9以上支持的 List类 中的方法
-
 * 应当在迭代器中操作容器数据，而不是在foreach中
-
 * 通常使用我们会使用 [Deque类](https://www.matools.com/file/manual/jdk_api_1.8_google/java/util/Deque.html) 来实现堆栈队列操作，即使用一个双端队列
+* 利用String对象的不可变性来作为`HashMap<String,Object>`的很有好处（案例见*FisherYatesShuffle.java*）
+  * 速度快：缓存机制
+  * 线程安全：不可变
+  * 所有对象都有`toString()`便于转化
 
 ## 每日连击  :water_buffalo:
 
-* 【03-03】001-005题 :heavy_plus_sign:
+* 【03-03】001 - 005题 :heavy_plus_sign:
 * 【03-15】006题 :heavy_plus_sign:
 * 【03-16】007题 :heavy_plus_sign:
-
-
+* 【~ - 03-18】008 - 011题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
