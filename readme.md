@@ -24,6 +24,12 @@
   * 速度快：缓存机制
   * 线程安全：不可变
   * 所有对象都有`toString()`便于转化
+  * ```java 
+    //  int[] -> List 的方法
+    		Arrays.stream(list).boxed().collect(Collectors.toList());
+    //  转化ArrayList -> int[] 的方法
+    		arrayList.stream().mapToInt(e -> e).toArray();
+    ```
 
 ## 每日连击  :water_buffalo:
 
@@ -31,6 +37,7 @@
 * 【03-15】006题 :heavy_plus_sign:
 * 【03-16】007题 :heavy_plus_sign:
 * 【~ - 03-18】008 - 011题 :heavy_plus_sign:
+* 【03-19】012、014题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
@@ -44,3 +51,8 @@
 * **快捷键学习**
   * [Alt + Enter 介绍](https://github.com/judasn/IntelliJ-IDEA-Tutorial/blob/master/hotkey-alt-enter-introduce.md)
   * todo 标记！ 
+
+## 不熟练的知识点
+
+* ==构建递归算法的思维能力很软！！！==
+
