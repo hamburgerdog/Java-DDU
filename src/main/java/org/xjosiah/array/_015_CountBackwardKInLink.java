@@ -4,6 +4,8 @@ import org.xjosiah.common.MyLinkedNode;
 
 import java.util.Scanner;
 
+import static org.xjosiah.common.MyLinkedNode.createLink;
+
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  *
@@ -26,21 +28,6 @@ public class _015_CountBackwardKInLink {
         System.out.println("\n--------------searching-----------------");
         System.out.println("The Link[_BACKWARD_K_]`s value is : "
                 + findBackward_K_InLink(rootNode, K));
-    }
-
-    /**
-     * 创建链表
-     *
-     * @param rootNode 链表头节点
-     * @param length   要创建的链表长度
-     */
-    private static void createLink(MyLinkedNode<Integer> rootNode, int length) {
-        MyLinkedNode<Integer> tempNode = rootNode;
-        for (int i = 1; i <= length; i++) {
-            MyLinkedNode<Integer> node = new MyLinkedNode<>(i + 1, null);
-            tempNode.setNext(node);
-            tempNode = node;
-        }
     }
 
     /**

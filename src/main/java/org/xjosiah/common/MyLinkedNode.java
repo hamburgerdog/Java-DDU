@@ -44,4 +44,20 @@ public class MyLinkedNode<T> {
     public boolean hasNext() {
         return getNext() != null;
     }
+
+    /**
+     * 创建一个递增的Integer链表
+     * 主要用于练习链表算法时，快速构建一条链表以提供数据。
+     *
+     * @param rootNode 链表头节点
+     * @param length   要创建的链表长度
+     */
+    public static void createLink(MyLinkedNode<Integer> rootNode, int length) {
+        MyLinkedNode<Integer> tempNode = rootNode;
+        for (int i = 1; i <= length; i++) {
+            MyLinkedNode<Integer> node = new MyLinkedNode<>(i + 1, null);
+            tempNode.setNext(node);
+            tempNode = node;
+        }
+    }
 }
