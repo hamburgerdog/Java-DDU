@@ -20,7 +20,6 @@ public class _015_CountBackwardKInLink {
     public static void main(String[] args) {
         int randomLength = (int) (Math.random() * RANDOM_NUM);
         createLink(rootNode, randomLength);
-        System.out.println("random length is : " + randomLength);
 
         System.out.print("plz input The K u want to find backwardly in Link : ");
         int K = new Scanner(System.in).nextInt();
@@ -43,7 +42,9 @@ public class _015_CountBackwardKInLink {
         MyLinkedNode<Integer> rightNodePointer = rootNode;
         MyLinkedNode<Integer> leftNodePointer = rootNode;
 
-        for (int i = 0; i < k; i++) {
+        if (k <= 0) throw new RuntimeException("K不能小于1");
+
+        for (int i = 1; i < k; i++) {
             if (rightNodePointer.hasNext())
                 rightNodePointer = rightNodePointer.getNext();
             else throw new RuntimeException("K超过了链表的长度");

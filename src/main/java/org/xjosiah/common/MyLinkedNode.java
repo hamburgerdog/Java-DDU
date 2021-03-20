@@ -1,5 +1,8 @@
 package org.xjosiah.common;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
 /**
  * 通用的链表节点，用于构建某一类型的链表
  *
@@ -53,11 +56,27 @@ public class MyLinkedNode<T> {
      * @param length   要创建的链表长度
      */
     public static void createLink(MyLinkedNode<Integer> rootNode, int length) {
+        System.out.println("Created_Link`s length is : " + length);
         MyLinkedNode<Integer> tempNode = rootNode;
-        for (int i = 1; i <= length; i++) {
+        for (int i = 1; i < length; i++) {
             MyLinkedNode<Integer> node = new MyLinkedNode<>(i + 1, null);
             tempNode.setNext(node);
             tempNode = node;
         }
+    }
+
+    /**
+     * 根据头节点输出某一条链表,以数组形式展示
+     *
+     * @param rootNode 链表的头节点
+     */
+    public static void printLink(MyLinkedNode rootNode) {
+        ArrayList<MyLinkedNode> list = new ArrayList<>();
+        while (rootNode != null) {
+            list.add(rootNode);
+            rootNode = rootNode.next;
+        }
+        System.out.println("\n######## PRINTING_LINK ########");
+        System.out.println(list.stream().map(t -> t.value).collect(Collectors.toList()));
     }
 }
