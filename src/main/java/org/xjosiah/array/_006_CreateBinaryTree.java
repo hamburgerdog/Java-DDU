@@ -1,5 +1,7 @@
 package org.xjosiah.array;
 
+import org.xjosiah.common.MyTreeNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -65,7 +67,7 @@ public class _006_CreateBinaryTree {
     /**
      * 操作迭代器从先序遍历得到节点
      *
-     * @return
+     * @return  节点的值
      */
     private static Integer nextPreListValue() {
         Integer result = null;
@@ -86,42 +88,4 @@ public class _006_CreateBinaryTree {
         ordList.add(node.getValue());
     }
 
-}
-
-class MyTreeNode<T> {
-    private MyTreeNode<T> leftChild;
-    private MyTreeNode<T> rightChild;
-    private T value;
-
-    public void setLeftChild(MyTreeNode<T> leftChild) {
-        this.leftChild = leftChild;
-    }
-
-    public void setRightChild(MyTreeNode<T> rightChild) {
-        this.rightChild = rightChild;
-    }
-
-    public T getValue() {
-        return value;
-    }
-
-    public MyTreeNode<T> getLeftChild() {
-        return leftChild;
-    }
-
-    public MyTreeNode<T> getRightChild() {
-        return rightChild;
-    }
-
-    public boolean hasLeftChild() {
-        return leftChild != null;
-    }
-
-    public boolean hasRightChild() {
-        return rightChild != null;
-    }
-
-    public MyTreeNode(T value) {
-        this.value = value;
-    }
 }

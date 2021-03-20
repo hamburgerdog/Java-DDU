@@ -1,21 +1,23 @@
 package org.xjosiah.array;
 
+import org.xjosiah.common.MyLinkedNode;
+
 /**
  * @author  xjosiah
  * @since   2021/3/3
  */
 public class _005_ReverseLinkedList {
-    private static MyLinkedNode linkedNode8;
+    private static MyLinkedNode<Character> linkedNode8;
 
     static {
-        MyLinkedNode linkedNode1 = new MyLinkedNode('h', null);
-        MyLinkedNode linkedNode2 = new MyLinkedNode('g', linkedNode1);
-        MyLinkedNode linkedNode3 = new MyLinkedNode('f', linkedNode2);
-        MyLinkedNode linkedNode4 = new MyLinkedNode('e', linkedNode3);
-        MyLinkedNode linkedNode5 = new MyLinkedNode('d', linkedNode4);
-        MyLinkedNode linkedNode6 = new MyLinkedNode('c', linkedNode5);
-        MyLinkedNode linkedNode7 = new MyLinkedNode('b', linkedNode6);
-        linkedNode8 = new MyLinkedNode('a', linkedNode7);
+        MyLinkedNode<Character> linkedNode1 = new MyLinkedNode<>('h', null);
+        MyLinkedNode<Character> linkedNode2 = new MyLinkedNode<>('g', linkedNode1);
+        MyLinkedNode<Character> linkedNode3 = new MyLinkedNode<>('f', linkedNode2);
+        MyLinkedNode<Character> linkedNode4 = new MyLinkedNode<>('e', linkedNode3);
+        MyLinkedNode<Character> linkedNode5 = new MyLinkedNode<>('d', linkedNode4);
+        MyLinkedNode<Character> linkedNode6 = new MyLinkedNode<>('c', linkedNode5);
+        MyLinkedNode<Character> linkedNode7 = new MyLinkedNode<>('b', linkedNode6);
+        linkedNode8 = new MyLinkedNode<>('a', linkedNode7);
     }
 
     /**
@@ -24,7 +26,7 @@ public class _005_ReverseLinkedList {
      * PS： LinkedList 是 双端链表
      * @param node  起始节点
      */
-    private static void reverse(MyLinkedNode node){
+    private static void reverse(MyLinkedNode<Character> node){
         if (node.getNext()!=null){
             reverse(node.getNext());
         }
@@ -33,29 +35,5 @@ public class _005_ReverseLinkedList {
 
     public static void main(String[] args) {
         reverse(linkedNode8);
-    }
-}
-
-/**
- * 单链表节点 【character类型】
- */
-class MyLinkedNode{
-    private Character c;
-    private MyLinkedNode next;
-
-    public MyLinkedNode(Character c, MyLinkedNode next) {
-        this.c = c;
-        this.next = next;
-    }
-
-    public MyLinkedNode getNext() {
-        return next;
-    }
-
-    @Override
-    public String toString() {
-        return "MyLinkedNode{" +
-                "c=" + c +
-                '}';
     }
 }

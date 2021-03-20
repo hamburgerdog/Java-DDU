@@ -38,6 +38,7 @@
 * 【03-16】007题 :heavy_plus_sign:
 * 【~ - 03-18】008 - 011题 :heavy_plus_sign:
 * 【03-19】012、014题 :heavy_plus_sign:
+* 【03-20】015题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
@@ -45,7 +46,10 @@
 >
 > IDEA版本为 MacOS-2020.1 开发版
 
-* 推荐插件​ `CodeGlance`(代码最右显示代码地图) ​ `Rainbow Brackets`（对称括号着色便于分辨）
+* 推荐插件​ 
+    * `CodeGlance` : 代码最右显示代码地图
+    * `Rainbow Brackets` : 对称括号着色便于分辨
+    * `FormatIncrementer` : 逐行递增数字 `control + shift + 1`
 * 一直被我忽略的代码补全方式 `Postfix Completion` 即 `a.nn` => `if (a != null) {}` (`a.notnull`同理）
 * 自带Postman -> REST Client
 * **快捷键学习**
