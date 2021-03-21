@@ -43,4 +43,15 @@ public class MyTreeNode<T> {
         this.value = value;
     }
 
+    /**
+     * 根据值来设置子树
+     * @param leftValue 左子树的值 | 使用时可以为null，即根据泛型限制应该使用包装类
+     * @param rightValue 右子树的值 | 同上
+     * @return  返回设置完子树的当前节点
+     */
+    public MyTreeNode<T> setChildTreeNodeByValue(T leftValue, T rightValue) {
+        this.setLeftChild(new MyTreeNode<>(leftValue));
+        this.setRightChild(new MyTreeNode<>(rightValue));
+        return this;
+    }
 }
