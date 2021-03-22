@@ -21,7 +21,7 @@ public class _021_StackWithFunc_Min_ {
             stackWithFuncMin.push((int) (Math.random() * RAND_NUM));
         }
         stackWithFuncMin.printStack();
-        System.out.println("The min num in stack is : " + stackWithFuncMin.min()+ "\n");
+        System.out.println("The min num in stack is : " + stackWithFuncMin.min() + "\n");
         for (int i = 0; i < RAND_NUM; i++) {
             System.out.print("pop [ " + stackWithFuncMin.pop() + " ] -> ");
             System.out.print("The min num in stack is : " + stackWithFuncMin.min() + "\n");
@@ -61,8 +61,7 @@ public class _021_StackWithFunc_Min_ {
     }
 
     public void printStack() {
-        Integer[] result = dataStack.toArray(new Integer[0]);
-        String resultStr = Arrays.toString(result);
+        String resultStr = Arrays.toString(dataStack.toArray(new Integer[0]));
         System.out.println(resultStr);
     }
 }
