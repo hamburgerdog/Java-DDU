@@ -38,13 +38,10 @@ public class _022_WhetherIsPopArrayInStack {
     public static boolean isOutputList(Stack<Integer> originStack, int[] testPopList) {
         if (originStack.size() != testPopList.length) return false;
 
-        Integer beforeValue;
-        Integer behindValue;
-        int nowIndexInStack;
         for (int i = 0; i < testPopList.length - 1; i++) {
-            beforeValue = Integer.MIN_VALUE;
-            behindValue = Integer.MIN_VALUE;
-            nowIndexInStack = originStack.indexOf(testPopList[i]);
+            Integer beforeValue = Integer.MIN_VALUE;
+            Integer behindValue = Integer.MIN_VALUE;
+            int nowIndexInStack = originStack.indexOf(testPopList[i]);
             if (nowIndexInStack - 1 >= 0) {
                 beforeValue = originStack.get(nowIndexInStack - 1);
             }
