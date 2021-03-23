@@ -58,8 +58,8 @@ public class MyTreeNode<T> {
      * @return 返回设置完子树的当前节点
      */
     public MyTreeNode<T> setChildTreeNodeByValue(T leftValue, T rightValue) {
-        this.setLeftChild(new MyTreeNode<>(leftValue));
-        this.setRightChild(new MyTreeNode<>(rightValue));
+        if (leftValue!=null) this.setLeftChild(new MyTreeNode<>(leftValue));
+        if (rightValue!=null) this.setRightChild(new MyTreeNode<>(rightValue));
         return this;
     }
 }
