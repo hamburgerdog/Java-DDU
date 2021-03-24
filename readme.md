@@ -30,6 +30,7 @@
     //  转化ArrayList -> int[] 的方法
     		arrayList.stream().mapToInt(e -> e).toArray();
     ```
+* boolean类型的数据在java中最终是以int保存的,对其进行位操作是被允许的。
 
 ## 每日连击  :water_buffalo:
 
@@ -40,8 +41,9 @@
 * 【03-19】012、014题 :heavy_plus_sign:
 * 【03-20】015-016题 :heavy_plus_sign:
 * 【03-21】017、018、019题 :heavy_plus_sign:
-* 【03-21】020、021、022题 :heavy_plus_sign:
-* 【03-22】023、024题 :heavy_plus_sign:
+* 【03-22】020、021、022题 :heavy_plus_sign:
+* 【03-23】023、024题 :heavy_plus_sign:
+* 【03-24】025题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
