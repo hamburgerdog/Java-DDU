@@ -1,6 +1,7 @@
 package org.xjosiah.array;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * 输入n个整数，找出其中最小的K个数
@@ -12,8 +13,30 @@ public class _030_FindNumsLessThanKthInArray {
     private static final int[] originArray = {4, 5, 1, 6, 2, 7, 3, 8, 4};
 
     public static void main(String[] args) {
-        System.out.println(findNumsLessThanKthByQuickSort(Arrays.copyOf(originArray, originArray.length), 4));
-        System.out.println(updateFindNumsByQuickSort(Arrays.copyOf(originArray, originArray.length), 4));
+        System.out.println(findNumsLessThanKthByQuickSort(Arrays.copyOf(originArray, originArray.length), 6));
+        System.out.println(updateFindNumsByQuickSort(Arrays.copyOf(originArray, originArray.length), 6));
+        System.out.println(findNumsByMinHeap(Arrays.copyOf(originArray, originArray.length), 6));
+    }
+
+    /**
+     * 使用java自带的优先队列（维系一个最小堆的方法）
+     *
+     * @param array 源数组
+     * @param k     第K个
+     * @return 包含前K个数的数组的字符串
+     */
+    private static String findNumsByMinHeap(int[] array, int k) {
+        if (k > array.length) throw new RuntimeException("【ERROR】：K超过数组长度！");
+        //  过滤重复数据
+        array = Arrays.stream(array).distinct().toArray();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        for (int i = 0; i < array.length; i++) {
+            minHeap.add(array[i]);
+        }
+        //  注意，此处不能使用toArray方法，因为其返回的Array是无顺序的！！！！
+        int[] result = new int[k];
+        for (int i = 0; i < k; i++) result[i] = minHeap.poll();
+        return Arrays.toString(result);
     }
 
     /**
@@ -100,6 +123,5 @@ public class _030_FindNumsLessThanKthInArray {
         array[i] = key;
         return i;
     }
-
 
 }

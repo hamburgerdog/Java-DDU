@@ -31,6 +31,7 @@
     		arrayList.stream().mapToInt(e -> e).toArray();
     ```
 * boolean类型的数据在java中最终是以int保存的,对其进行位操作是被允许的。
+* java优先队列 `PriorityQueue` 可以用来实现最小堆（最大堆），其中 `toArray()` 方法返回的是无序的！！
 
 ## 每日连击  :water_buffalo:
 

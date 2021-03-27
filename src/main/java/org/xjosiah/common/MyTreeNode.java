@@ -1,7 +1,7 @@
 package org.xjosiah.common;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 通用的二叉树节点，用于构建某一类型的二叉树
