@@ -1,5 +1,8 @@
 package org.xjosiah.common;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
 /**
  * 通用的二叉树节点，用于构建某一类型的二叉树
  *
@@ -58,8 +61,37 @@ public class MyTreeNode<T> {
      * @return 返回设置完子树的当前节点
      */
     public MyTreeNode<T> setChildTreeNodeByValue(T leftValue, T rightValue) {
-        if (leftValue!=null) this.setLeftChild(new MyTreeNode<>(leftValue));
-        if (rightValue!=null) this.setRightChild(new MyTreeNode<>(rightValue));
+        if (leftValue != null) this.setLeftChild(new MyTreeNode<>(leftValue));
+        if (rightValue != null) this.setRightChild(new MyTreeNode<>(rightValue));
         return this;
+    }
+
+    /**
+     * 根据整型数组创建Integer类型的二叉树
+     *
+     * @param array 源数组
+     * @return 创建完成的二叉树的头节点
+     */
+    public static MyTreeNode<Integer> createTreeByArray(int[] array) {
+        Queue<MyTreeNode<Integer>> queue = new LinkedList<>();
+        MyTreeNode<Integer> node = new MyTreeNode<>(array[0]);
+        for (int i = 0; i < array.length; i++) {
+            if (queue.isEmpty()) {
+                queue.add(node);
+                continue;
+            }
+            MyTreeNode<Integer> pollNode = queue.poll();
+
+            MyTreeNode<Integer> leftChild = new MyTreeNode<>(array[i]);
+            pollNode.setLeftChild(leftChild);
+            queue.add(leftChild);
+
+            if (++i < array.length) {
+                MyTreeNode<Integer> rightChild = new MyTreeNode<>(array[i]);
+                pollNode.setRightChild(rightChild);
+                queue.add(rightChild);
+            }
+        }
+        return node;
     }
 }
