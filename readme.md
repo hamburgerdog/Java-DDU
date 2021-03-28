@@ -48,7 +48,7 @@
 * 【03-25】027、028题 :heavy_plus_sign:
 * 【03-26】029题 :heavy_plus_sign:
 * 【03-27】030题 :heavy_plus_sign:
-* 【03-28】031、032题 :heavy_plus_sign:
+* 【03-28】031、032、033、034题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
