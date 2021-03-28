@@ -32,6 +32,7 @@
     ```
 * boolean类型的数据在java中最终是以int保存的,对其进行位操作是被允许的。
 * java优先队列 `PriorityQueue` 可以用来实现最小堆（最大堆），其中 `toArray()` 方法返回的是无序的！！
+* lambda表达式中可以使用原子类操作来和外部代码块设值进行通信，体现了可见性和原子性，可见性由volatile提供，原子性由cas提供
 
 ## 每日连击  :water_buffalo:
 
@@ -48,7 +49,7 @@
 * 【03-25】027、028题 :heavy_plus_sign:
 * 【03-26】029题 :heavy_plus_sign:
 * 【03-27】030题 :heavy_plus_sign:
-* 【03-28】031、032、033、034题 :heavy_plus_sign:
+* 【03-28】031、032、033、034、035题 :heavy_plus_sign:
 
 ## idea*奇技淫巧* :green_heart:
 
