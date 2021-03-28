@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class _034_UglyNum {
     private static final int N = 300;
-    private static ArrayList<Integer> uglyNumList = new ArrayList<>(N);
 
     public static void main(String[] args) {
         System.out.println(findNthUglyNum(N));
