@@ -20,17 +20,21 @@ public class _036_InversePairs {
      * 即每交换一次说明存在一个逆序对，如7,5,6,4 -> 5,6,4,7 证明7有三个逆序对，而后的5、6同理
      *
      * @param array 源数组
-     * @return  逆序对总数
+     * @return 逆序对总数
      */
     private static int countInversePairByPopSort(int[] array) {
         int count = 0;
+        boolean isSorted = false;
         for (int i = 0; i < array.length - 1; i++) {
+            if (isSorted) break;
+            isSorted = true;
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                     count++;
+                    isSorted = false;
                 }
             }
         }
