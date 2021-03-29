@@ -49,20 +49,33 @@ public class MyLinkedNode<T> {
     }
 
     /**
-     * 创建一个递增的Integer链表
+     * 创建一个从1开始递增的Integer链表
      * 主要用于练习链表算法时，快速构建一条链表以提供数据。
      *
      * @param rootNode 链表头节点
      * @param length   要创建的链表长度
      */
     public static void createLink(MyLinkedNode<Integer> rootNode, int length) {
+        createLink(rootNode, 1, length);
+    }
+
+    /**
+     * 创建一个从某整数开始递增的Integer链表
+     *
+     * @param rootNode 头节点
+     * @param begin    起始数
+     * @param length   要创建的链表的长度
+     * @return 返回末尾节点
+     */
+    public static MyLinkedNode<Integer> createLink(MyLinkedNode<Integer> rootNode, int begin, int length) {
         System.out.println("Created_Link`s length is : " + length);
         MyLinkedNode<Integer> tempNode = rootNode;
-        for (int i = 1; i < length; i++) {
-            MyLinkedNode<Integer> node = new MyLinkedNode<>(i + 1, null);
+        for (int i = begin; i < begin + length; i++) {
+            MyLinkedNode<Integer> node = new MyLinkedNode<>(i, null);
             tempNode.setNext(node);
             tempNode = node;
         }
+        return tempNode;
     }
 
     /**
