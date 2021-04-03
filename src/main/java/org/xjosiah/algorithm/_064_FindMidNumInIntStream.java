@@ -1,6 +1,7 @@
 package org.xjosiah.algorithm;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 /**
@@ -22,7 +23,13 @@ public class _064_FindMidNumInIntStream {
         for (int i : array) {
             minHeap.add(i);
         }
-        Integer[] resultArray = minHeap.toArray(new Integer[0]);
+        //  优先队列直接toArray无法保证是有序数组
+        ArrayList<Integer> list = new ArrayList<>();
+        int size = minHeap.size();
+        for (int i = 0; i < size; i++) {
+            list.add(minHeap.poll());
+        }
+        Integer[] resultArray = list.toArray(new Integer[0]);
 
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         int halfIndex = array.length / 2;
