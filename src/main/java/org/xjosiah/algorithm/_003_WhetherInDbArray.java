@@ -17,11 +17,11 @@ public class _003_WhetherInDbArray {
      * {4, 7, 10, 13}
      * {6, 8, 11, 15}
      */
-    private static boolean whetherInArrays(int value) {
+    static boolean whetherInArrays(int value) {
         //  右上角落起始 即 9
         int x = 0;
         int y = 3;
-        while (x >= 0 && y >= 0) {
+        while (x >= 0 && y >= 0 && x<=3 && y<=3) {
             if (arrays[x][y] != value) {
                 if (arrays[x][y] > value) {
                     y--;
@@ -33,9 +33,5 @@ public class _003_WhetherInDbArray {
             }
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(whetherInArrays(5));
     }
 }

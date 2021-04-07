@@ -5,7 +5,7 @@
 > * 存放每日练习的算法题目和解题思路
 > * 存放练习过程中遇到的知识点
 > * 存放练习Java和使用idea过程中使用到的技巧
-> PS: *该仓库为测试全不覆盖仓库~即不考虑异常情况*
+> PS: *该仓库的测试使用 `Kotlin` - kotest测试库* 可以在这里找到：[kotest](https://github.com/kotest/kotest-intellij-plugin) | 异常通常不抛出处理仅使用 `System.err` 输出提醒
 >
 > 当前练习的 **《剑指offer》** 题目仓库：[gatieme/CodingInterviews](https://github.com/gatieme/CodingInterviews)
 
@@ -58,6 +58,8 @@
 * 【04-02】056、057、058、059、060题 :heavy_plus_sign:
 * 【04-03】062、064题 :heavy_plus_sign:
 * 【04-05】065题 :heavy_plus_sign:
+* 【04-06】003、004题测试 :white_check_mark:
+* 【04-07】005、006题测试 :white_check_mark:
 
 ## idea*奇技淫巧* :green_heart:
 
