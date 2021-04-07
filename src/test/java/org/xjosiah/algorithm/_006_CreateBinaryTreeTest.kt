@@ -4,6 +4,7 @@ import io.kotest.matchers.collections.shouldBeSameSizeAs
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldEndWith
 import io.kotest.matchers.collections.shouldStartWith
+import io.kotest.matchers.shouldBe
 import org.junit.Test
 
 
@@ -32,15 +33,15 @@ class _006_CreateBinaryTreeTest {
     fun createFailedCazErrorListTest() {
         var preList = arrayListOf(1, 2, 3, 4, 5)
         var midList = arrayListOf(4, 3, 2, 1)
-        println(_006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward().toString())
+        _006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward() shouldBe arrayListOf()
 
         preList = arrayListOf()
         midList = arrayListOf()
-        println(_006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward().toString())
+        _006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward() shouldBe arrayListOf()
 
         preList = arrayListOf(1, 2, 3, 4, 5)
         midList = arrayListOf(6, 5, 4, 3, 2)
-        println(_006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward().toString())
+        _006_CreateBinaryTree(preList, midList).createBTreeAndCollectInListByBackward() shouldBe arrayListOf()
     }
 
 }
