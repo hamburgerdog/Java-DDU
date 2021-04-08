@@ -1,5 +1,7 @@
 package org.xjosiah.algorithm;
 
+import java.math.BigDecimal;
+
 /**
  * 用函数计算 power(double base ,int exponent) -> base^exponent
  *
@@ -7,24 +9,6 @@ package org.xjosiah.algorithm;
  * @since 2021/3/18
  */
 public class _011_Power {
-    public static void main(String[] args) {
-        System.out.println("--------------method2---------------");
-        System.out.println(powerMethod2(0, 2));
-        System.out.println(powerMethod2(1, 3));
-        System.out.println(powerMethod2(2, 4));
-        System.out.println(powerMethod2(-2, -4));
-        System.out.println(powerMethod2(-1, -3));
-        System.out.println(powerMethod2(0, -2));
-
-        System.out.println("\n--------------method1---------------");
-        System.out.println(powerMethod1(0, 2));
-        System.out.println(powerMethod1(1, 3));
-        System.out.println(powerMethod1(2, 4));
-        System.out.println(powerMethod1(-2, -4));
-        System.out.println(powerMethod1(-1, -3));
-        System.out.println(powerMethod1(0, -2));
-    }
-
     /**
      * 全面处理异常但不高效的函数
      *
@@ -32,26 +16,26 @@ public class _011_Power {
      * @param exponent 指数
      * @return 运算结果
      */
-    private static double powerMethod1(double base, int exponent) {
+    static double powerMethod1(double base, int exponent) {
         if (exponent == 0) {
             return 1.0;
         }
         if (exponent < 0) {
             if (base == 0)
                 throw new IllegalArgumentException("当指数小于0时，底数不能为0");
-            return 1 / calculateInMethod1(base, -exponent);
+            return 1 / calculateInMethod(base, -exponent);
         }
-        return calculateInMethod1(base, exponent);
+        return calculateInMethod(base, exponent);
     }
 
     /**
      * 真正执行指数计算的函数
      *
-     * @param base      指数
-     * @param exponent  底数
-     * @return          运算结果
+     * @param base     指数
+     * @param exponent 底数
+     * @return 运算结果
      */
-    private static double calculateInMethod1(double base, int exponent) {
+    private static double calculateInMethod(double base, int exponent) {
         double res = 1.0;
         for (int i = 0; i < exponent; i++) {
             res *= base;
@@ -66,7 +50,7 @@ public class _011_Power {
      * 按二进制指数 最高位1 的位数进行迭代，即循环结束条件是当二进制指数减为0，每次迭代
      * 先判断当前指数最低位是否为1，是则将乘数累乘到结果中，且每次都要将乘数也进行自我累
      * 乘,然后将指数右移1位（如果指数为负需要先使其为正，因为这里的>>是算术右移）
-     *
+     * <p>
      * 以 power(2.0, 9) 为例：
      * 1. 9 = 1001b
      * 2. 0001b = 1 | 1000b = 8
@@ -74,14 +58,17 @@ public class _011_Power {
      * 乘数累乘则得出乘数与位数相关：当1位时乘数为2.0^1 3位时乘数为2.0^(2^3)=2.0^8
      * 当最低位为1则乘数累乘到结果 -> 即步骤3
      *
-     *
-     * @param base      底数
-     * @param exponent  指数
-     * @return          指数运算结果
+     * @param base     底数
+     * @param exponent 指数
+     * @return 指数运算结果
      */
-    private static double powerMethod2(double base, int exponent) {
+    static double powerMethod2(double base, int exponent) {
         if (exponent == 0) return 1.0;
         else if (exponent == 1) return base;
+
+        if (base == 0.0) {
+            if (exponent < 0) throw new IllegalArgumentException("0不能有负数次方");
+        }
 
         boolean isNegative = false;
 
@@ -100,6 +87,6 @@ public class _011_Power {
             temp *= temp;
             exponent = exponent >> 1;
         }
-        return isNegative ? 1 / res : res;
+        return isNegative ? 1/res : res;
     }
 }
