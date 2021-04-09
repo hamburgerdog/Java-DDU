@@ -11,21 +11,13 @@ import java.util.Arrays;
  * @since 2021/3/19
  */
 public class _014_ReOrderArray {
-    private static final int[] arrayList = {1, 2, 8, 9, 10, 4, 3, 4, 5, 6, 7};
-
-    public static void main(String[] args) {
-        int[] popList = Arrays.copyOf(arrayList, arrayList.length);
-        reOrderArrayByPop(popList);
-        System.out.println(Arrays.toString(popList));
-        System.out.println(Arrays.toString(reOrderArrayQuicklyButCostly(arrayList)));
-    }
-
     /**
      * 冒泡算法排序
      *
      * @param list 需要排序的数组
      */
-    private static void reOrderArrayByPop(int[] list) {
+    static int[] reOrderArrayByPop(int[] list) {
+        if (list == null) throw new IllegalArgumentException("请勿传入空对象");
         boolean isOrderly = false;
 
         int tempUsed2ExchangeInWhile;
@@ -42,6 +34,7 @@ public class _014_ReOrderArray {
                 }
             }
         }
+        return list;
     }
 
     /**
@@ -50,7 +43,8 @@ public class _014_ReOrderArray {
      * @param list 待排序的数组
      * @return 排序完成的结果
      */
-    private static int[] reOrderArrayQuicklyButCostly(int[] list) {
+    static int[] reOrderArrayQuicklyButCostly(int[] list) {
+        if (list == null) throw new IllegalArgumentException("请勿传入空对象");
         ArrayList<Integer> evenList = new ArrayList<>();
         ArrayList<Integer> primeList = new ArrayList<>();
 
