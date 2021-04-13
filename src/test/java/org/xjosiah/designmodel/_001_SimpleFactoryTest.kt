@@ -7,6 +7,11 @@ import org.xjosiah.designmodel.simplefactory.OperationFactory
 import org.xjosiah.designmodel.simplefactory.operation.*
 import java.lang.IllegalArgumentException
 
+/**
+ * 简单工厂 - 通常用于封装生成类的方法
+ * @author xjosiah
+ * @since 2021/4/13
+ */
 class _001_SimpleFactoryTest : StringSpec({
     "1 + 2 should be 3"{
         compute(1.0, 2.0, AddOperation::class.java) shouldBe 3.0
