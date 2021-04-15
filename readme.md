@@ -62,7 +62,8 @@
 * 【04-07】005-010题测试 :white_check_mark:
 * 【04-08】011、012题测试 :white_check_mark:
 * 【04-08】014题测试 :white_check_mark:
-* 【04-013】简单工厂模式 :white_check_mark:
+* 【04-13】简单工厂+策略模式 :white_check_mark:
+* 【04-15】静态内部类创建单例对象、两种动态代理方法 :white_check_mark:
 
 ## idea*奇技淫巧* :green_heart:
 
